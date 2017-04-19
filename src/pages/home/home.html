@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Assigment 2
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <h1 text-center> Enter the right Code</h1>
+    <p text-center>{{state}}</p>
+  </ion-grid>
+  <ion-list>
+    <ion-item>
+      <p>Tapped: {{timesTapped}}</p>
+    </ion-item>
+    <ion-item>
+      <p>Pressed: {{timesPressed}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button color="danger" small (click)="resetAllWasClicked()">Reset All</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="danger" small (click)="resetTapWasClicked()">Reset 'Taps'</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="danger" small (click)="resetPresspWasClicked()">Reset 'Presses'</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center class="gesturesCol" (tap)="tapWasClicked()">
+          Tap Here
+      </ion-col>
+      <ion-col text-center class="gesturesCol" (press)="pressWasClicked()">
+        Press Here
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
